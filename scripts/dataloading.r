@@ -16,10 +16,6 @@ m <- dim(Y)[2]
 # KERNEL VIRUSES
 # ---------------
 
-# kernel based on spectrum
-G.diff <- read.csv("04_predictors/Gdiff.csv")
-G.diff <- as.matrix(G.diff)
-
 # compute genus sim
 famgenus <- data.frame(genus=c())
 
@@ -71,7 +67,9 @@ brtvar <- c('X5.1_AdultBodyMass_g',
             'ForStrat.Value_S', 'cites')
 
 battraits <- read.csv("04_predictors/Han-BatTraits.csv", row.names = 1)
-# 
+
+# UNCOMMENT IF YOU NEED TO battraits-completed.csv, takes 10'
+
 # battraits$Activity.Nocturnal <- as.factor(battraits$Activity.Nocturnal)
 # battraits$Activity.Diurnal <- as.factor(battraits$Activity.Diurnal)
 # battraits$Activity.Crepuscular <- as.factor(battraits$Activity.Crepuscular)
